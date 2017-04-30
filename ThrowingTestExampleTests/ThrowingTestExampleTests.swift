@@ -13,24 +13,83 @@ class ThrowingTestExampleTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func test_WhenProvidedWithTooShortParameter_shouldThrowTooShortError() {
+        
+        let throwingClass = MyThrowingClass()
+        
+        do {
+            
+            let _ = try throwingClass.someThrowingFunction(aParam: "123")
+            
+        } catch let error as MyThrowingError {
+            
+            XCTAssertEqual(error, MyThrowingError.tooShort)
+            
+        } catch {
+            
+            XCTFail("Unidentififed error thrown")
         }
+        
+    }
+
+    func test_WhenProvidedWithTooLongParameter_shouldThrowTooLongError() {
+        
+        let throwingClass = MyThrowingClass()
+
+        do {
+            
+            let _ = try throwingClass.someThrowingFunction(aParam: "12356789012345")
+            
+        } catch let error as MyThrowingError {
+            
+            XCTAssertEqual(error, MyThrowingError.tooLong)
+            
+        } catch {
+            
+            XCTFail("Unidentififed error thrown")
+        }
+        
+    }
+
+    func test_WhenProvidedWithParameterInRange_shouldReturnCorrectOutput() {
+        
+        let throwingClass = MyThrowingClass()
+
+        do {
+            
+            let result = try throwingClass.someThrowingFunction(aParam: "1235678")
+            XCTAssertEqual("Did something with 1235678", result)
+            
+        } catch let error {
+            
+            XCTFail("Unidentififed error thrown: \(error.localizedDescription)")
+        }
+        
+    }
+
+    func test_WhenProvidedWithParameterCausingExplosion_shouldThrowKaboomError() {
+        
+        let throwingClass = MyThrowingClass()
+        
+        do {
+            
+            let _ = try throwingClass.someThrowingFunction(aParam: "plan")
+            
+        } catch let error as MyThrowingError {
+            
+            XCTAssertEqual(error, MyThrowingError.kaboom(message: "You're only supposed to blow the bloody doors off!"))
+            
+        } catch {
+            
+            XCTFail("Unidentififed error thrown")
+        }
+        
     }
     
 }

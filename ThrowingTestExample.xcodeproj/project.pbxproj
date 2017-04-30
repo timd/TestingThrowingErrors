@@ -13,6 +13,8 @@
 		223FB3331EB6121D005F63CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223FB3321EB6121D005F63CE /* Assets.xcassets */; };
 		223FB3361EB6121D005F63CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223FB3341EB6121D005F63CE /* LaunchScreen.storyboard */; };
 		223FB3411EB6121D005F63CE /* ThrowingTestExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223FB3401EB6121D005F63CE /* ThrowingTestExampleTests.swift */; };
+		223FB34C1EB61233005F63CE /* MyThrowingClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223FB34B1EB61233005F63CE /* MyThrowingClass.swift */; };
+		223FB34D1EB61233005F63CE /* MyThrowingClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223FB34B1EB61233005F63CE /* MyThrowingClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 		223FB33C1EB6121D005F63CE /* ThrowingTestExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThrowingTestExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		223FB3401EB6121D005F63CE /* ThrowingTestExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrowingTestExampleTests.swift; sourceTree = "<group>"; };
 		223FB3421EB6121D005F63CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		223FB34B1EB61233005F63CE /* MyThrowingClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyThrowingClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 				223FB3321EB6121D005F63CE /* Assets.xcassets */,
 				223FB3341EB6121D005F63CE /* LaunchScreen.storyboard */,
 				223FB3371EB6121D005F63CE /* Info.plist */,
+				223FB34B1EB61233005F63CE /* MyThrowingClass.swift */,
 			);
 			path = ThrowingTestExample;
 			sourceTree = "<group>";
@@ -201,6 +205,7 @@
 			files = (
 				223FB32E1EB6121D005F63CE /* ViewController.swift in Sources */,
 				223FB32C1EB6121D005F63CE /* AppDelegate.swift in Sources */,
+				223FB34C1EB61233005F63CE /* MyThrowingClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223FB34D1EB61233005F63CE /* MyThrowingClass.swift in Sources */,
 				223FB3411EB6121D005F63CE /* ThrowingTestExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
